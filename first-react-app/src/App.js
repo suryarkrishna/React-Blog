@@ -31,9 +31,6 @@ class App extends Component {
     ]
   }
 
- 
-
-
   onLikeBtnClick = (pos) => {
       const updatedBlogList = this.state.blogArr;
       const updatedBlogObj = updatedBlogList[pos];
@@ -43,15 +40,11 @@ class App extends Component {
       this.setState({blogArr: updatedBlogList})
   }
 
-
- 
-
   onHideBtnClick = () => {
       this.setState((prevState) => ({
         showBlogs: !prevState.showBlogs
       }));
   }
-
 
   render(){
     const buttonText = this.state.showBlogs ? "Hide list" : "Show list";
@@ -75,8 +68,6 @@ class App extends Component {
       </div>
     );
   }
-
-
 }
 
 export default App;

@@ -1,23 +1,20 @@
+import { Component } from "react";
 
-const BlogCard = (props) => {
+class BlogCard extends Component {
 
-
-  // onLikeBtnClick = () => {
-  //     this.setState((prevState)=>{
-  //        return  {likeCount: prevState.likeCount+1}
-  //     })
-  // }
-
-
+  render() {
     return (
       <div className="BlogCard">
-        <h3>{props.title}</h3>
-        <p>{props.description}</p>
+        <h3>{this.props.title}</h3>
+        <p>{this.props.description}</p>
 
-        <p>Like Count: {props.likeCount}</p>
-        <button onClick={props.onLikeBtnClick}>Like</button>
+        <p>Like Count: {this.props.likeCount}</p>
+        <button onClick={this.props.onLikeBtnClick}>Like</button>
       </div>
     );
+  }
+
+   
   
     
 }
